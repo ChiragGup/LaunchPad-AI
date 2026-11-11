@@ -54,6 +54,7 @@ const previousNotificationIds = useRef(null);
 const [editName, setEditName] = useState("");
 const [editEmail, setEditEmail] = useState("");
 const [editBio, setEditBio] = useState("");
+const API_URL = import.meta.env.VITE_API_URL.replace(/\/+$/, "");
 
   const userMenuItems = [
     { label: "Overview", icon: faTableColumns },
@@ -76,7 +77,7 @@ const [editBio, setEditBio] = useState("");
 
   const getMessage = async()=>{
     try {
-      const response = await axios.get( `${import.meta.env.VITE_API_URL}/getMessage`,{
+      const response = await axios.get( `${API_URL}/getMessage`,{
         withCredentials:true
       })
       console.log(response.data)
@@ -90,7 +91,7 @@ const [editBio, setEditBio] = useState("");
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/profile`,
+          `${API_URL}/profile`,
           { withCredentials: true }
         );
 
@@ -115,7 +116,7 @@ getMessage()
 const saveProfile = async () => {
   try {
     const response = await axios.put(
-    ` ${import.meta.env.VITE_API_URL}/updateProfile`,
+    `${API_URL}/updateProfile`,
       {
         name: editName,
         email: editEmail,
