@@ -7,7 +7,10 @@ import router from "./route/authRoute.js";
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://launch-pad-ai-bay.vercel.app/"
+  ],
   credentials: true,
 }));
 
