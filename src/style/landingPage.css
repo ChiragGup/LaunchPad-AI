@@ -1,0 +1,218 @@
+:root {
+    --primary: #7C3AED;      
+    --primary-dark: #6D28D9;
+    --primary-light:#e2d4f7;
+    --primary-gray:#454347b7;
+    --primary-darkest: #1e0447;
+}
+/* navbar start*/
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-primary-background {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+
+}
+
+.btn-primary-background:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+}
+
+.text-color{
+    color: var(--primary);
+}
+
+.nav-link{
+    color: black;
+}
+
+.nav-link:hover{
+    background-color: var(--primary) !important;
+    border-radius: 10px;
+    color: white !important;
+}
+
+.nav-link.active {
+    
+    background-color: var(--primary) !important;
+    border-radius: 10px;
+    color: white !important;
+}
+
+.fontSize{
+    font-size: 12px;
+}
+
+.fontbold{
+     font-size: 18px;
+}
+.fontBtn{
+    font-size: 10px;
+}
+
+@media (max-width: 991.98px) {
+
+     .navbar-nav {
+        margin-top: 20px;
+        text-align: center;
+        gap: 8px;
+    } 
+
+    .footerCenter{
+        text-align: center;
+    }
+
+ 
+
+    .btn-container {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+}
+
+/* landing page start */
+
+.text-bg-color{
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+   
+}
+
+.text-color{
+    color: var(--primary);
+}
+
+.pTag{
+    font-size: 14px;
+    color: var(--primary-gray);
+   
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.fontBtnMain{
+    font-size: 12px;
+}
+.logo-color{
+    color: white;
+}
+
+.logo-color-blue{
+    color:  var(--primary);
+}
+
+/* .data-container{
+     background: linear-gradient(
+        135deg,
+        #FCFAFF 0%,
+        #e0d7ee 100%
+    );
+     */
+
+
+.stats-card {
+    border: none;
+    margin-left: -4px;
+    border-radius: 16px;
+    max-width: 280px;
+ 
+}
+
+.stats-card .card-body {
+    padding: 10px 20px;
+}
+
+.fontBtnMain:hover{
+background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-outline-primary:hover .logo-color-blue i {
+    color: white !important;
+}
+
+/* landing page 2 */
+
+.heading-line {
+    margin: top 1px;
+    width: 100px;
+    height: 4px;
+    background-color: var(--primary-dark);
+    border-radius: 10px;
+}
+
+.heading-line:hover{
+    width: 150px;
+    cursor: pointer;
+}
+.backColor {
+    width: 190px;
+    height: 60px;
+    background-color: var(--primary-light);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* footer */
+.footerBack{
+    background-color: var(--primary-darkest);
+        color: white;
+}
+
+.aTag{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+.aTag:hover {
+    color: yellow;
+    padding-left: 6px;
+}
+
+
+.user-name {
+  color: #333;
+  font-weight: 500;
+  margin: auto;
+  white-space: nowrap;
+}
+
+
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+  padding: 24px;
+}
+

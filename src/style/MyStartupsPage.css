@@ -1,0 +1,685 @@
+
+/* My Startups page — LaunchPad AI */
+
+.my-startups-page {
+  --ms-primary: #7c3aed;
+  --ms-primary-dark: #6d28d9;
+  --ms-text: #211b2b;
+  --ms-muted: #7d7788;
+  --ms-border: #eee9f5;
+  --ms-surface: #ffffff;
+
+  padding: 32px;
+  color: var(--ms-text);
+  min-height: 100%;
+}
+
+.my-startups-page * {
+  box-sizing: border-box;
+}
+
+/* Page Header */
+
+.my-startups-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.ms-eyebrow {
+  display: inline-block;
+  color: var(--ms-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  margin-bottom: 8px;
+}
+
+.my-startups-header h1 {
+  margin: 0;
+  color: var(--ms-text);
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.my-startups-header p {
+  color: var(--ms-muted);
+  margin: 9px 0 0;
+  font-size: 0.96rem;
+}
+
+/* Total Startups Card */
+
+.ms-total-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 19px;
+  background: #fff;
+  border: 1px solid var(--ms-border);
+  border-radius: 17px;
+  box-shadow: 0 8px 26px rgba(47, 26, 82, 0.045);
+  min-width: 164px;
+}
+
+.ms-total-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  color: var(--ms-primary);
+  background: #f2eaff;
+  border-radius: 13px;
+  font-size: 1.4rem;
+}
+
+.ms-total-card strong,
+.ms-total-card div span {
+  display: block;
+}
+
+.ms-total-card strong {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.ms-total-card div span {
+  color: var(--ms-muted);
+  font-size: 0.78rem;
+  margin-top: 3px;
+}
+
+/* Toolbar */
+
+.ms-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.ms-search-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9992a5;
+  background: #fff;
+  border: 1px solid var(--ms-border);
+  border-radius: 12px;
+  padding: 11px 15px;
+  min-width: min(100%, 290px);
+  font-size: 0.88rem;
+}
+
+.ms-search-placeholder > span:first-child {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.ms-results-count {
+  color: var(--ms-muted);
+  font-size: 0.84rem;
+}
+
+.ms-results-count strong {
+  color: var(--ms-text);
+}
+
+/* Startup Cards */
+
+.ms-startup-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--ms-surface);
+  border: 1px solid var(--ms-border);
+  border-radius: 19px;
+  box-shadow: 0 8px 28px rgba(43, 24, 70, 0.035);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.ms-startup-card:hover {
+  transform: translateY(-4px);
+  border-color: #dfd0ff;
+  box-shadow: 0 16px 36px rgba(64, 33, 111, 0.09);
+}
+
+.ms-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 21px 21px 0;
+}
+
+.ms-startup-symbol {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  border-radius: 15px;
+  background: linear-gradient(140deg, #eee4ff, #f8f3ff);
+  border: 1px solid #e8dcff;
+  color: var(--ms-primary-dark);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+/* Status Badges */
+
+.ms-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #f5f3f7;
+  color: #71697d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ms-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.ms-status-approved {
+  color: #18865a;
+  background: #e8f8ef;
+}
+
+.ms-status-in-review {
+  color: #9a6700;
+  background: #fff5d8;
+}
+
+.ms-status-draft {
+  color: #71697d;
+  background: #f3f0f7;
+}
+
+.ms-status-rejected {
+  color: #bd3547;
+  background: #fff0f1;
+}
+
+/* Card Content */
+
+.ms-card-content {
+  flex: 1;
+  padding: 20px 21px 18px;
+}
+
+.ms-category {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: var(--ms-primary);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.035em;
+}
+
+.ms-card-content h2 {
+  color: var(--ms-text);
+  font-size: 1.22rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin: 0 0 6px;
+  overflow-wrap: anywhere;
+}
+
+.ms-tagline {
+  color: #4f465d;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 11px;
+}
+
+.ms-description {
+  color: var(--ms-muted);
+  font-size: 0.84rem;
+  line-height: 1.7;
+  margin: 0;
+  min-height: 70px;
+}
+
+/* Stage and Location */
+
+.ms-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-top: 1px solid #f0ecf5;
+  margin-top: 19px;
+  padding-top: 15px;
+}
+
+.ms-details-grid > div {
+  min-width: 0;
+}
+
+.ms-detail-label {
+  display: block;
+  color: #9a93a6;
+  font-size: 0.72rem;
+  margin-bottom: 5px;
+}
+
+.ms-details-grid strong {
+  display: block;
+  color: #41384d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+/* Card Footer and Actions */
+
+.ms-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 21px 18px;
+  border-top: 1px solid #f4f0f8;
+}
+
+.ms-created-date {
+  color: #9a93a6;
+  font-size: 0.72rem;
+}
+
+.ms-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ms-card-actions .btn,
+.ms-modal-footer .btn {
+  border-radius: 9px;
+  font-size: 0.8rem;
+  font-weight: 750;
+  padding: 8px 13px;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.ms-edit-btn {
+  color: var(--ms-primary-dark);
+  background: #f3edff;
+  border: 1px solid #e8dcff;
+}
+
+.ms-edit-btn:hover {
+  color: #fff;
+  background: var(--ms-primary);
+  border-color: var(--ms-primary);
+}
+
+.ms-delete-btn {
+  color: #c43f50;
+  background: #fff;
+  border: 1px solid #f3d9dd;
+}
+
+.ms-delete-btn:hover {
+  color: #fff;
+  background: #c43f50;
+  border-color: #c43f50;
+}
+
+/* Empty State */
+
+.ms-empty-state {
+  text-align: center;
+  padding: 70px 20px;
+  background: #fff;
+  border: 1px dashed #ded4ed;
+  border-radius: 18px;
+}
+
+.ms-empty-illustration {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 20px;
+  color: var(--ms-primary);
+  background: #f2eaff;
+  font-size: 1.8rem;
+}
+
+.ms-empty-state h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.ms-empty-state p {
+  color: var(--ms-muted);
+  margin: 8px 0 0;
+}
+
+/* Modal Backdrop */
+
+.ms-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 24px;
+  background: rgba(24, 15, 39, 0.58);
+  backdrop-filter: blur(5px);
+  animation: ms-fade-in 140ms ease-out;
+}
+
+/* Edit Modal */
+
+.ms-modal {
+  width: min(100%, 690px);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 28px 90px rgba(19, 10, 34, 0.28);
+  animation: ms-modal-in 180ms ease-out;
+}
+
+.ms-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 25px 27px 20px;
+  border-bottom: 1px solid #f0ebf6;
+}
+
+.ms-modal-header h2,
+.ms-delete-modal h2 {
+  color: var(--ms-text);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+
+.ms-modal-header p {
+  color: var(--ms-muted);
+  font-size: 0.86rem;
+  margin: 7px 0 0;
+}
+
+.ms-modal-close {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  border-radius: 10px;
+  background: #f5f2f8;
+  color: #655b72;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.ms-modal-close:hover {
+  background: #ece4f6;
+}
+
+.ms-modal-body {
+  padding: 23px 27px 27px;
+}
+
+/* Modal Form */
+
+.ms-modal .form-label {
+  display: block;
+  color: #494054;
+  font-size: 0.82rem;
+  font-weight: 750;
+  margin-bottom: 7px;
+}
+
+.ms-form-control {
+  min-height: 44px;
+  border-color: #e6dfef;
+  border-radius: 10px;
+  color: #30283a;
+  font-size: 0.88rem;
+  box-shadow: none !important;
+}
+
+.ms-form-control:focus {
+  border-color: #a98be9;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1) !important;
+}
+
+textarea.ms-form-control {
+  min-height: 105px;
+  resize: vertical;
+}
+
+/* Modal Footer */
+
+.ms-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 17px 27px 23px;
+  border-top: 1px solid #f0ebf6;
+}
+
+.ms-cancel-btn {
+  color: #665d72;
+  background: #fff;
+  border: 1px solid #e6dfef;
+}
+
+.ms-cancel-btn:hover {
+  background: #f7f4fa;
+  border-color: #d9cde9;
+}
+
+.ms-save-btn {
+  color: #fff;
+  background: var(--ms-primary);
+  border: 1px solid var(--ms-primary);
+  padding-inline: 17px !important;
+}
+
+.ms-save-btn:hover {
+  color: #fff;
+  background: var(--ms-primary-dark);
+  border-color: var(--ms-primary-dark);
+}
+
+/* Delete Confirmation Modal */
+
+.ms-delete-modal {
+  width: min(100%, 430px);
+  padding-top: 28px;
+  text-align: center;
+}
+
+.ms-delete-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  color: #c43f50;
+  background: #fff0f1;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.ms-delete-modal h2 {
+  padding: 0 22px;
+  font-size: 1.28rem;
+}
+
+.ms-delete-modal > p {
+  color: var(--ms-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  padding: 0 25px;
+  margin: 11px 0 22px;
+}
+
+.ms-delete-modal > p strong {
+  color: var(--ms-text);
+}
+
+.ms-delete-footer {
+  justify-content: center;
+}
+
+.ms-confirm-delete-btn {
+  color: #fff;
+  background: #c43f50;
+  border: 1px solid #c43f50;
+}
+
+.ms-confirm-delete-btn:hover {
+  color: #fff;
+  background: #a92e3e;
+  border-color: #a92e3e;
+}
+
+/* Animations */
+
+@keyframes ms-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ms-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(9px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 767.98px) {
+  .my-startups-page {
+    padding: 22px 15px;
+  }
+
+  .my-startups-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ms-total-card {
+    width: 100%;
+  }
+
+  .ms-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ms-search-placeholder {
+    width: 100%;
+  }
+
+  .ms-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ms-modal-backdrop {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .ms-modal {
+    max-height: calc(100vh - 24px);
+    margin: auto 0;
+  }
+
+  .ms-modal-header,
+  .ms-modal-body {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  .ms-modal-footer {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}
+
+/* Accessibility: reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .ms-startup-card,
+  .ms-modal-backdrop,
+  .ms-modal {
+    animation: none;
+    transition: none;
+  }
+}
+
+.ms-description {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.ms-read-toggle {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #7c3aed;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ms-read-toggle:hover {
+  color: #6d28d9;
+  text-decoration: underline;
+}
+
+.ms-read-toggle:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 3px;
+  border-radius: 2px;
+}

@@ -1,0 +1,531 @@
+
+.manage-users-page {
+  padding: 25px;
+  min-height: 100vh;
+  background: #f8f7fc;
+  color: #272333;
+}
+
+/* PAGE HEADER */
+
+.manage-users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.manage-users-header h2 {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.manage-users-header p,
+.users-list-header p {
+  color: #85818f;
+  margin: 0;
+  font-size: 14px;
+}
+
+.total-user-badge {
+  background: #eee7ff;
+  color: #7c3aed;
+  padding: 11px 16px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+}
+
+/* STATISTICS */
+
+.user-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.user-stat-card {
+  background: white;
+  border: 1px solid #eeeaf5;
+  border-radius: 12px;
+  padding: 21px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 3px 12px rgba(30, 20, 60, 0.03);
+}
+
+.user-stat-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.user-stat-icon.purple {
+  color: #7c3aed;
+  background: #f0eaff;
+}
+
+.user-stat-icon.blue {
+  color: #3185df;
+  background: #eaf3ff;
+}
+
+.user-stat-icon.orange {
+  color: #e89531;
+  background: #fff4e5;
+}
+
+.user-stat-icon.green {
+  color: #239b69;
+  background: #e7f8ef;
+}
+
+.user-stat-card p {
+  color: #85818f;
+  font-size: 13px;
+  margin: 0 0 5px;
+}
+
+.user-stat-card h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* USERS LIST */
+
+.users-list-container {
+  background: white;
+  border: 1px solid #eeeaf5;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(30, 20, 60, 0.03);
+}
+
+.users-list-header {
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #f0edf5;
+}
+
+.users-list-header h4 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+/* SEARCH */
+
+.user-search-box {
+  width: 290px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e8e4ef;
+  border-radius: 8px;
+  padding: 10px 13px;
+  color: #96909f;
+  transition: 0.2s;
+}
+
+.user-search-box:focus-within {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+.user-search-box input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #333;
+  background: transparent;
+}
+
+.clear-search-btn {
+  background: none;
+  border: none;
+  color: #96909f;
+  cursor: pointer;
+}
+
+/* TABLE */
+
+.manage-users-table {
+  margin: 0;
+  min-width: 750px;
+  vertical-align: middle;
+}
+
+.manage-users-table thead {
+  background: #faf9fc;
+}
+
+.manage-users-table th {
+  padding: 16px 20px;
+  color: #85818f;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #eeeaf5;
+  white-space: nowrap;
+}
+
+.manage-users-table td {
+  padding: 16px 20px;
+  font-size: 13px;
+  color: #625d6b;
+  border-bottom: 1px solid #f2eff6;
+}
+
+.manage-users-table tbody tr {
+  transition: background 0.2s;
+}
+
+.manage-users-table tbody tr:hover {
+  background: #fcfbff;
+}
+
+/* USER PROFILE */
+
+.user-profile-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #302b3a;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.user-avatar,
+.user-profile-cell img {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee7ff;
+  color: #7c3aed;
+  font-weight: 700;
+}
+
+/* ROLE */
+
+.user-role {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-role {
+  background: #fff0db;
+  color: #c47b17;
+}
+
+.regular-role {
+  background: #e9f6ef;
+  color: #248755;
+}
+
+/* ACTION BUTTONS */
+
+.user-action-buttons {
+  display: flex;
+  gap: 9px;
+}
+
+.user-action-buttons button {
+  width: 33px;
+  height: 33px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.view-user-btn {
+  background: #eee8ff;
+  color: #7c3aed;
+}
+
+.view-user-btn:hover {
+  background: #7c3aed;
+  color: white;
+}
+
+.delete-user-btn {
+  background: #fff0f0;
+  color: #dc4545;
+}
+
+.delete-user-btn:hover {
+  background: #dc4545;
+  color: white;
+}
+
+/* EMPTY STATE */
+
+.no-users {
+  text-align: center;
+  padding: 45px !important;
+  color: #999 !important;
+}
+
+.no-users svg {
+  font-size: 30px;
+}
+
+.no-users p {
+  margin: 8px 0 0;
+}
+
+/* TABLE FOOTER */
+
+.users-table-footer {
+  padding: 15px 20px;
+  color: #85818f;
+  font-size: 12px;
+}
+
+/* MODAL OVERLAY */
+
+.user-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(25, 20, 35, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* VIEW USER MODAL */
+
+.user-modal {
+  background: white;
+  width: 100%;
+  max-width: 460px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.user-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 22px;
+  border-bottom: 1px solid #eeeaf5;
+}
+
+.user-modal-header h4 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.user-modal-header button {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.user-modal-body {
+  padding: 25px;
+  text-align: center;
+}
+
+.user-detail-avatar {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee7ff;
+  color: #7c3aed;
+  border-radius: 50%;
+  font-size: 27px;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.user-detail-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-modal-body h5 {
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.user-detail-info {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.user-detail-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0edf5;
+  font-size: 12px;
+}
+
+.user-detail-info span {
+  color: #85818f;
+}
+
+.user-detail-info strong {
+  color: #302b3a;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.user-modal-footer {
+  padding: 15px 22px;
+  border-top: 1px solid #eeeaf5;
+  text-align: right;
+}
+
+.close-user-modal,
+.cancel-delete-btn {
+  padding: 9px 17px;
+  border: 1px solid #e6e1ed;
+  background: white;
+  border-radius: 7px;
+  color: #625d6b;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.close-user-modal:hover,
+.cancel-delete-btn:hover {
+  background: #f8f7fc;
+}
+
+/* DELETE CONFIRMATION MODAL */
+
+.delete-user-modal {
+  background: white;
+  width: 100%;
+  max-width: 390px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.delete-warning-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #fff0f0;
+  color: #dc4545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 17px;
+  font-size: 24px;
+}
+
+.delete-user-modal h4 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.delete-user-modal p {
+  font-size: 13px;
+  color: #85818f;
+  line-height: 1.7;
+}
+
+.delete-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.confirm-delete-btn {
+  padding: 9px 17px;
+  background: #dc4545;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.confirm-delete-btn:hover {
+  background: #c52d2d;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .user-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .manage-users-page {
+    padding: 15px;
+  }
+
+  .manage-users-header,
+  .users-list-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .total-user-badge {
+    width: fit-content;
+  }
+
+  .user-search-box {
+    width: 100%;
+  }
+
+  .user-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .delete-user-modal {
+    padding: 24px 18px;
+  }
+}

@@ -1,0 +1,42 @@
+/* .cardData{
+width: 300px;
+
+} */
+
+:root {
+    --primary: #7C3AED;      
+    --primary-dark: #6D28D9;
+    --primary-light:#e2d4f7;
+    --primary-gray:#454347b7;
+    --primary-darkest: #1e0447;
+}
+
+.backColor_1 {
+    width: 100px ;
+    height: 60px;
+    background-color: var(--primary-light);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 991.98px) {
+.leftData{
+    display: none;
+    
+}
+
+.googleGit{
+    flex-direction: column;
+    text-align: center;
+}
+}
+
+.googleData{
+    background-color: white;
+        padding: 10px;
+    border: none;
+}
+

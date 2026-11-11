@@ -1,0 +1,672 @@
+
+/* ========================================
+   SUBMIT IDEAS - MAIN CONTAINER
+======================================== */
+
+.lp-submit-ideas {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+  color: #25213b;
+  animation: lp-submit-enter 0.35s ease;
+  box-sizing: border-box;
+}
+
+.lp-submit-ideas *,
+.lp-submit-ideas *::before,
+.lp-submit-ideas *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.lp-submit-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  overflow: hidden;
+  padding: 34px;
+  margin-bottom: 26px;
+  border-radius: 22px;
+  background: linear-gradient(
+    120deg,
+    #21183f,
+    #5429a4 68%,
+    #7c3aed
+  );
+  color: #fff;
+}
+
+.lp-submit-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.lp-submit-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #d8c8ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.lp-submit-hero h1 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.lp-submit-hero p {
+  max-width: 520px;
+  margin: 0;
+  color: #e4dcf7;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lp-submit-hero-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 112px;
+  height: 112px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 46px;
+  transform: rotate(5deg);
+}
+
+/* ========================================
+   MAIN GRID LAYOUT
+======================================== */
+
+.lp-submit-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(250px, 0.8fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.lp-submit-form-card,
+.lp-submit-tips {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid #ece8f5;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(45, 25, 90, 0.045);
+}
+
+/* ========================================
+   FORM HEADER
+======================================== */
+
+.lp-submit-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eeeaf5;
+}
+
+.lp-submit-heading-icon,
+.lp-submit-tips-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #f0eaff;
+  color: #7c3aed;
+  font-size: 19px;
+}
+
+.lp-submit-card-heading h2 {
+  margin: 0 0 5px;
+  color: #302a45;
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.lp-submit-card-heading p {
+  margin: 0;
+  color: #827d92;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   SUCCESS / NOTICE MESSAGE
+======================================== */
+
+.lp-submit-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd0ff;
+  border-radius: 10px;
+  background: #f6f1ff;
+  color: #5b32a5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.lp-submit-notice > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.lp-submit-notice p {
+  margin: 0;
+}
+
+/* ========================================
+   FORM FIELDS
+======================================== */
+
+.lp-submit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.lp-submit-field label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: #302a45;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.lp-submit-optional {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #f3f0f8;
+  color: #817990;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.lp-submit-field input,
+.lp-submit-field textarea,
+.lp-submit-field select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 13px 14px;
+  border: 1px solid #e3deed;
+  border-radius: 11px;
+  outline: none;
+  background: #fdfcff;
+  color: #302a45;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.lp-submit-field input,
+.lp-submit-field select {
+  min-height: 46px;
+}
+
+.lp-submit-field textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.lp-submit-field input::placeholder,
+.lp-submit-field textarea::placeholder {
+  color: #aaa4b8;
+  opacity: 1;
+}
+
+.lp-submit-field input:focus,
+.lp-submit-field textarea:focus,
+.lp-submit-field select:focus {
+  border-color: #8b5cf6;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.lp-submit-field input:disabled,
+.lp-submit-field textarea:disabled,
+.lp-submit-field select:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.lp-submit-field small {
+  color: #8c869c;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Optional select icon wrapper */
+
+.lp-submit-select-wrap {
+  position: relative;
+}
+
+.lp-submit-select-wrap > svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  z-index: 1;
+  color: #8b5cf6;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.lp-submit-select-wrap select {
+  padding-left: 40px;
+}
+
+/* ========================================
+   VALIDATION ERRORS
+======================================== */
+
+.lp-submit-error {
+  margin: 0;
+  color: #dc2626;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.lp-submit-field input[aria-invalid="true"],
+.lp-submit-field textarea[aria-invalid="true"],
+.lp-submit-field select[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+.lp-submit-field input[aria-invalid="true"]:focus,
+.lp-submit-field textarea[aria-invalid="true"]:focus,
+.lp-submit-field select[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* ========================================
+   FORM ACTION BUTTONS
+======================================== */
+
+.lp-submit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 6px;
+}
+
+.lp-submit-reset,
+.lp-submit-publish {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 45px;
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.lp-submit-reset {
+  border-color: #e4deef;
+  background: #fff;
+  color: #625a74;
+}
+
+.lp-submit-reset:hover {
+  border-color: #d5c9e9;
+  background: #f7f4fc;
+}
+
+.lp-submit-publish {
+  background: #7c3aed;
+  color: #fff;
+  box-shadow: 0 5px 14px rgba(124, 58, 237, 0.2);
+}
+
+.lp-submit-publish:hover {
+  background: #6d28d9;
+  box-shadow: 0 7px 18px rgba(124, 58, 237, 0.28);
+  transform: translateY(-1px);
+}
+
+.lp-submit-reset:focus-visible,
+.lp-submit-publish:focus-visible {
+  outline: 3px solid rgba(124, 58, 237, 0.3);
+  outline-offset: 3px;
+}
+
+.lp-submit-reset:disabled,
+.lp-submit-publish:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  transform: none;
+}
+
+.lp-submit-arrow {
+  margin-left: 3px;
+  font-size: 11px;
+}
+
+/* ========================================
+   TIPS SIDEBAR
+======================================== */
+
+.lp-submit-tips {
+  background: linear-gradient(160deg, #fff, #faf8ff);
+}
+
+.lp-submit-tips-icon {
+  margin-bottom: 20px;
+}
+
+.lp-submit-tips h3 {
+  margin: 0 0 10px;
+  color: #302a45;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.lp-submit-tips > p {
+  margin: 0 0 26px;
+  color: #827b91;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.lp-submit-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 23px;
+}
+
+.lp-submit-tip > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: #eee7ff;
+  color: #7136d3;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.lp-submit-tip strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #352d4b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.lp-submit-tip p {
+  margin: 0;
+  color: #898297;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   PRIVACY NOTE
+======================================== */
+
+.lp-submit-privacy-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #e8defe;
+  border-radius: 12px;
+  background: #f4efff;
+  color: #6c48a8;
+}
+
+.lp-submit-privacy-note > svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.lp-submit-privacy-note p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   ENTRANCE ANIMATION
+======================================== */
+
+@keyframes lp-submit-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .lp-submit-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lp-submit-tips {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .lp-submit-tips-icon,
+  .lp-submit-tips > h3,
+  .lp-submit-tips > p,
+  .lp-submit-privacy-note {
+    grid-column: 1 / -1;
+  }
+
+  .lp-submit-tips-icon {
+    margin-bottom: 0;
+  }
+
+  .lp-submit-tips > p {
+    margin-bottom: 8px;
+  }
+
+  .lp-submit-tip {
+    margin-bottom: 10px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+  .lp-submit-ideas {
+    padding-bottom: 16px;
+  }
+
+  .lp-submit-hero {
+    gap: 16px;
+    padding: 24px;
+    margin-bottom: 18px;
+    border-radius: 17px;
+  }
+
+  .lp-submit-hero h1 {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
+
+  .lp-submit-hero p {
+    font-size: 13px;
+  }
+
+  .lp-submit-hero-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    font-size: 27px;
+  }
+
+  .lp-submit-layout {
+    gap: 18px;
+  }
+
+  .lp-submit-form-card,
+  .lp-submit-tips {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .lp-submit-card-heading {
+    align-items: flex-start;
+    gap: 11px;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+  }
+
+  .lp-submit-heading-icon,
+  .lp-submit-tips-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 16px;
+  }
+
+  .lp-submit-card-heading h2 {
+    font-size: 18px;
+  }
+
+  .lp-submit-field {
+    margin-bottom: 19px;
+  }
+
+  .lp-submit-tips {
+    display: block;
+  }
+
+  .lp-submit-tips-icon {
+    margin-bottom: 16px;
+  }
+
+  .lp-submit-tips > p {
+    margin-bottom: 20px;
+  }
+
+  .lp-submit-tip {
+    margin-bottom: 18px;
+  }
+
+  .lp-submit-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .lp-submit-reset,
+  .lp-submit-publish {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+  .lp-submit-hero {
+    padding: 19px;
+  }
+
+  .lp-submit-hero h1 {
+    font-size: 23px;
+  }
+
+  .lp-submit-hero-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    font-size: 21px;
+  }
+
+  .lp-submit-form-card,
+  .lp-submit-tips {
+    padding: 16px;
+  }
+
+  .lp-submit-field input,
+  .lp-submit-field textarea,
+  .lp-submit-field select {
+    padding: 11px;
+    font-size: 12px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-submit-ideas {
+    animation: none;
+  }
+
+  .lp-submit-field input,
+  .lp-submit-field textarea,
+  .lp-submit-field select,
+  .lp-submit-reset,
+  .lp-submit-publish {
+    transition: none;
+  }
+}
