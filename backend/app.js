@@ -10,7 +10,9 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://launch-pad-ai-bay.vercel.app",
-    "https://launch-pad-penn9nglp-chirag-4e81.vercel.app"
+    "https://launch-pad-penn9nglp-chirag-4e81.vercel.app",
+        "https://launch-pad-3233d60me-chirag-4e81.vercel.app",
+        /^https:\/\/launch-pad-[a-z0-9-]+-chirag-4e81\.vercel\.app$/
   ],
   credentials: true,
 }));
