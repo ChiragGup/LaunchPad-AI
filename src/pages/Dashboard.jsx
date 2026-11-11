@@ -76,7 +76,7 @@ const [editBio, setEditBio] = useState("");
 
   const getMessage = async()=>{
     try {
-      const response = await axios.get( "http://localhost:5000/getMessage",{
+      const response = await axios.get( `${import.meta.env.VITE_API_URL}/getMessage`,{
         withCredentials:true
       })
       console.log(response.data)
@@ -90,7 +90,7 @@ const [editBio, setEditBio] = useState("");
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/profile",
+          `${import.meta.env.VITE_API_URL}/profile`,
           { withCredentials: true }
         );
 
@@ -115,7 +115,7 @@ getMessage()
 const saveProfile = async () => {
   try {
     const response = await axios.put(
-      "http://localhost:5000/updateProfile",
+    ` ${import.meta.env.VITE_API_URL}/updateProfile`,
       {
         name: editName,
         email: editEmail,

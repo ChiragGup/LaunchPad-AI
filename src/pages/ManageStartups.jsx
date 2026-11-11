@@ -18,7 +18,7 @@ function ManageStartups() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/adminexploreIdeas",
+          `${import.meta.env.VITE_API_URL}/adminexploreIdeas`,
           {
             withCredentials: true,
           }
@@ -61,7 +61,7 @@ function ManageStartups() {
 
     try {
       const response = await axios.patch(
-        "http://localhost:5000/updateIdeaStatus",
+        `${import.meta.env.VITE_API_URL}/updateIdeaStatus`,
         {
           id: id,
           status: status,
@@ -135,7 +135,7 @@ function ManageStartups() {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/message",
+      `${import.meta.env.VITE_API_URL}/message`,
       {
         userid: userId,
         cardid: ideaId,

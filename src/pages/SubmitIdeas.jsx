@@ -48,7 +48,7 @@ const onSubmit = async (data) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/submitIdeas",
+      `${import.meta.env.VITE_API_URL}/submitIdeas`,
       data,
       {
         withCredentials: true,

@@ -50,7 +50,7 @@ function ExploreIdeas() {
     const getIdeas = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/exploreIdeas",
+          `${import.meta.env.VITE_API_URL}/exploreIdeas`,
           { withCredentials: true }
         );
 

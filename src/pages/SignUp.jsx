@@ -24,7 +24,7 @@ const navigate = useNavigate();
 const onSubmit = async(data) => {
   console.log(data);
   try {
-const res = await axios.post("http://localhost:5000/register", {
+const res = await axios.post(`${import.meta.env.VITE_API_URL}/register`, {
   fullName: data.fullName,
   email: data.email,
   password: data.password,

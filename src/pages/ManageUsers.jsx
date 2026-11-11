@@ -34,7 +34,7 @@ function ManageUsers() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/data",
+          `${import.meta.env.VITE_API_URL}/data`,
           {
             withCredentials: true
           }
@@ -132,7 +132,7 @@ function ManageUsers() {
 
   try {
     const response = await axios.delete(
-       "http://localhost:5000/datadelete",
+       `${import.meta.env.VITE_API_URL}/datadelete`,
       {
         data: {
           id: userToDelete._id

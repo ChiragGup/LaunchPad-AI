@@ -25,7 +25,7 @@ function LandingPage() {
     const getData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/profile",
+          `${import.meta.env.VITE_API_URL}/profile`,
           {
             withCredentials: true,
           }
@@ -60,7 +60,7 @@ function LandingPage() {
   const logoutData = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/logout",
+        `${import.meta.env.VITE_API_URL}/logout`,
         {},
         {
           withCredentials: true,

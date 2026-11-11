@@ -11,7 +11,7 @@ function ForgotPassword() {
 const onSubmit = async (data) => {
   try {
     const res = await axios.post(
-      "http://localhost:5000/forgot-password",
+      `${import.meta.env.VITE_API_URL}/forgot-password`,
       {
         email: data.email,
       }

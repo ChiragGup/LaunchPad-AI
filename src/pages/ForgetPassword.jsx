@@ -25,7 +25,7 @@ const password = watch("password");
   const onSubmit = async (data) => {
     console.log(data)
     try {
-      const res = await axios.patch("http://localhost:5000/update-password", {
+      const res = await axios.patch(`${import.meta.env.VITE_API_URL}/update-password`, {
         password: data.password,
         forgetToken: token
       })

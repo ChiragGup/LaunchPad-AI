@@ -6,7 +6,7 @@ import "../style/MyStartupsPage.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API_URL = "http://localhost:5000/getUserProfile";
+const API_URL = `${import.meta.env.VITE_API_URL}/getUserProfile`;
 
 const emptyForm = {
   title: "",
@@ -82,7 +82,7 @@ function MyStartups() {
 
     // UI-only update; no backend API call
   try {
- const response =  await axios.put("http://localhost:5000/formData",{
+ const response =  await axios.put(`${import.meta.env.VITE_API_URL}/formData`,{
       id:editStartupId,
      title:data.title,
      category:data.category,
@@ -122,7 +122,7 @@ const handleDelete = async (id) => {
 
   try {
    const response = await axios.delete(
-    "http://localhost:5000/deleteformData",
+    `${import.meta.env.VITE_API_URL}/deleteformData`,
     {
       data: {
         id: id
@@ -154,7 +154,7 @@ const handleDelete = async (id) => {
 const fetchStartups = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/getUserProfile",
+        `${import.meta.env.VITE_API_URL}/getUserProfile`,
         {
           withCredentials: true,
         }
