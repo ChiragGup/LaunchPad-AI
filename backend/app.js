@@ -9,7 +9,8 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://launch-pad-ai-bay.vercel.app/"
+    "https://launch-pad-ai-bay.vercel.app",
+    "https://launch-pad-penn9nglp-chirag-4e81.vercel.app"
   ],
   credentials: true,
 }));
