@@ -5,6 +5,7 @@ import { forgotpassword, passwordResetData } from "../controller/forgotData.js";
 import { forgotPasswordLimiter } from "../middleware/forgotPasswordLimiter .js";
 import { adminexploreIdeas, createIdeas, deletefetechData, deleteform, exploreIdeas, fetchData, formData, generateIdeas, getAuthProfile, getMessage, message, updateIdeaStatus, updateProfile } from "../controller/profile.js";
 import adminMiddleware from "../middleware/adminMiddleware.js";
+import { fetchComments, getLikes, postComments, postLike } from "../controller/features.js";
 
 const router = express.Router();
 
@@ -35,5 +36,9 @@ router.get("/getMessage", authMiddleware, getMessage);
 router.put("/formData", formData);
 router.post("/submitIdeas", authMiddleware, createIdeas);
 router.post("/message", authMiddleware, message);
+router.post("/comments", authMiddleware, postComments);
 router.post("/generate", generateIdeas);
+router.get("/getComments", authMiddleware, fetchComments);
+router.post("/postLike", authMiddleware, postLike);
+router.get("/getLikes", authMiddleware, getLikes);
 export default router;

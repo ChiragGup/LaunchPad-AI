@@ -67,6 +67,11 @@ category: {
       enum: ["Pending", "Approved", "Rejected"],
       default: "Pending",
     },
+    
+    totalLikes: {
+      type: Number,
+      default: 0,
+    },
   },
   {
     timestamps: true,
